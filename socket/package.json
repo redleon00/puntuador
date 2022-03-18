@@ -1,0 +1,20 @@
+{
+  "name": "socket",
+  "version": "1.0.0",
+  "description": "Socket para sistema puntuador",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "https": "^1.0.0",
+    "socket.io": "^4.2.0",
+    "pm2": "^5.1.2"
+  }
+}
