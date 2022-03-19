@@ -398,7 +398,7 @@ export default {
     this.animals = this.teamData.all_teams;
     console.log("this.teamData", this.teamData);
     let cant = this.animals.length;
-    if (cant < 10) {
+    if (cant < 100) {
       this.activate = false;
     }
     this.getExpositors();
@@ -549,7 +549,7 @@ export default {
                 });
                 this.animals.splice(pos, 1);
                 let cant = this.animals.length;
-                if (cant < 10) {
+                if (cant < 100) {
                   this.activate = false;
                 }
               })
@@ -584,7 +584,7 @@ export default {
         );
         let animal_per_team = this.animals.length;
         //console.log(this.animals)
-        if (animal_per_race.length < 4 && animal_per_team <= 20) {
+        if (animal_per_race.length <= 3 && animal_per_team <= 100) {
           axios
             .post(`/animal/register`, this.form2)
             .then((res) => {
@@ -610,11 +610,12 @@ export default {
               });
             });
         } else {
+          console.log("el else", )
           let message = "";
-          if (animal_per_race.length > 4) {
+          if (animal_per_race.length > 3) {
             message =
               "Ha alcanzado el número máximo de ejemplares para esta RAZA y CATEGORIA en este equipo";
-          } else if (animal_per_team > 20) {
+          } else if (animal_per_team > 100) {
             message = "Ha alcanzado el número de ejemplares para este equipo";
           }
           this.$toast.open({

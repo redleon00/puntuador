@@ -8,12 +8,12 @@
     >
       <v-card class="mx-auto bodys">
         <div class="page-header text-center">
-          <h1 class="display-3">
+          <h1 class="display-3" style="color: white">
             <strong> {{ item.race + " " }}{{ item.group + " " }}</strong>
           </h1>
         </div>
         <div class="page-header text-center">
-          <h1>
+          <h1 style="color: #F0F0F0">
             <strong> RESULTADOS </strong>
           </h1>
           <div class="row align-center">
@@ -109,14 +109,15 @@ export default {
 <style scoped>
 @import url("https://fonts.googleapis.com/css?family=Poppins|Ubuntu&display=swap");
 .bodys {
-  background: rgb(255, 255, 255);
-  background-image: url("../assets/portada2.png");
-  font-family: "Ubuntu", sans-serif;
-  position: absolute;
-  -webkit-background-size: cover;
-  -moz-background-size: 50%;
-  -o-background-size: 50%;
-  background-size: 50%;
+ background: #4B79A1;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #283E51, #4B79A1);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #283E51, #4B79A1); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: 'Ubuntu', sans-serif;
+     position: absolute;
+     -webkit-background-size: cover;
+ -moz-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;  
 }
 
 .box {
